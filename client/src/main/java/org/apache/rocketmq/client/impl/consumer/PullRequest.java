@@ -20,7 +20,9 @@ import org.apache.rocketmq.common.message.MessageQueue;
 
 public class PullRequest {
     private String consumerGroup;
+    // 远程的 messageQueue
     private MessageQueue messageQueue;
+    // 本地的 processQueue
     private ProcessQueue processQueue;
     private long nextOffset;
     private boolean previouslyLocked = false;
