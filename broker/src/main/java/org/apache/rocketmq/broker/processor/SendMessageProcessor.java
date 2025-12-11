@@ -74,6 +74,7 @@ public class SendMessageProcessor extends AbstractSendMessageProcessor {
                                           RemotingCommand request) throws RemotingCommandException {
         RemotingCommand response = null;
         try {
+            // 处理请求
             response = asyncProcessRequest(ctx, request).get();
         } catch (InterruptedException | ExecutionException e) {
             log.error("process SendMessage error, request : " + request.toString(), e);
